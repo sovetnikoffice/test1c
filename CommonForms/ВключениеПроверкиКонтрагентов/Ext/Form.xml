@@ -1,0 +1,168 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<Form xmlns="http://v8.1c.ru/8.3/xcf/logform" xmlns:app="http://v8.1c.ru/8.2/managed-application/core" xmlns:cfg="http://v8.1c.ru/8.1/data/enterprise/current-config" xmlns:dcscor="http://v8.1c.ru/8.1/data-composition-system/core" xmlns:dcsset="http://v8.1c.ru/8.1/data-composition-system/settings" xmlns:ent="http://v8.1c.ru/8.1/data/enterprise" xmlns:lf="http://v8.1c.ru/8.2/managed-application/logform" xmlns:style="http://v8.1c.ru/8.1/data/ui/style" xmlns:sys="http://v8.1c.ru/8.1/data/ui/fonts/system" xmlns:v8="http://v8.1c.ru/8.1/data/core" xmlns:v8ui="http://v8.1c.ru/8.1/data/ui" xmlns:web="http://v8.1c.ru/8.1/data/ui/colors/web" xmlns:win="http://v8.1c.ru/8.1/data/ui/colors/windows" xmlns:xr="http://v8.1c.ru/8.3/xcf/readable" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" version="2.1">
+	<Title>
+		<v8:item>
+			<v8:lang>ru</v8:lang>
+			<v8:content>Проверка контрагентов</v8:content>
+		</v8:item>
+	</Title>
+	<Width>53</Width>
+	<WindowOpeningMode>LockOwnerWindow</WindowOpeningMode>
+	<AutoTitle>false</AutoTitle>
+	<AutoCommandBar name="ФормаКоманднаяПанель" id="-1">
+		<Autofill>false</Autofill>
+	</AutoCommandBar>
+	<Events>
+		<Event name="OnCreateAtServer">ПриСозданииНаСервере</Event>
+		<Event name="OnClose">ПриЗакрытии</Event>
+	</Events>
+	<ChildItems>
+		<UsualGroup name="ИнформацияОСервисеПроверкиДанных" id="4">
+			<Group>Vertical</Group>
+			<Representation>None</Representation>
+			<ShowTitle>false</ShowTitle>
+			<ExtendedTooltip name="ИнформацияОСервисеПроверкиДанныхРасширеннаяПодсказка" id="5"/>
+			<ChildItems>
+				<LabelDecoration name="ИнформацияОНеобходимостиОбратитьсяКАдминистратору" id="32">
+					<TextColor>#25B371</TextColor>
+					<Font ref="sys:DefaultGUIFont" height="10" bold="true" italic="false" underline="false" strikeout="false" kind="WindowsFont"/>
+					<Title formatted="false">
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Для включения проверки обратитесь к администратору</v8:content>
+						</v8:item>
+					</Title>
+					<ContextMenu name="ИнформацияОНеобходимостиОбратитьсяКАдминистраторуКонтекстноеМеню" id="33"/>
+					<ExtendedTooltip name="ИнформацияОНеобходимостиОбратитьсяКАдминистраторуРасширеннаяПодсказка" id="34"/>
+				</LabelDecoration>
+				<LabelDecoration name="ИнформацияОСервисе" id="1">
+					<Height>3</Height>
+					<HorizontalStretch>true</HorizontalStretch>
+					<VerticalStretch>true</VerticalStretch>
+					<Title formatted="true">
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>В программе появилась возможность использовать веб-сервис ФНС для проверки регистрации контрагентов в ЕГРН (требуется доступ в Интернет).
+&lt;link e1cib/app/Обработка.ИнструкцияПоИспользованиюПроверкиКонтрагента&gt;Подробнее о проверке&lt;/&gt;</v8:content>
+						</v8:item>
+					</Title>
+					<ContextMenu name="ИнформацияОСервисеКонтекстноеМеню" id="2"/>
+					<ExtendedTooltip name="ИнформацияОСервисеРасширеннаяПодсказка" id="3"/>
+				</LabelDecoration>
+				<LabelDecoration name="ПредупреждениеПроТестовыйРежимПроверкиКонтрагента" id="37">
+					<Height>1</Height>
+					<HorizontalStretch>true</HorizontalStretch>
+					<Title formatted="false">
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>&lt;Предупреждение про тестовый режим работы сервиса&gt;</v8:content>
+						</v8:item>
+					</Title>
+					<BackColor>style:ЦветФонаТестовогоРежимаСервисаФНС</BackColor>
+					<ContextMenu name="ПредупреждениеПроТестовыйРежимПроверкиКонтрагентаКонтекстноеМеню" id="38"/>
+					<ExtendedTooltip name="ПредупреждениеПроТестовыйРежимПроверкиКонтрагентаРасширеннаяПодсказка" id="39"/>
+				</LabelDecoration>
+			</ChildItems>
+		</UsualGroup>
+		<CommandBar name="Кнопки" id="65">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Кнопки</v8:content>
+				</v8:item>
+			</Title>
+			<ToolTip>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Кнопки</v8:content>
+				</v8:item>
+			</ToolTip>
+			<HorizontalLocation>Right</HorizontalLocation>
+			<ExtendedTooltip name="КнопкиРасширеннаяПодсказка" id="66"/>
+			<ChildItems>
+				<Button name="ВключитьСервисСейчас" id="49">
+					<Type>CommandBarButton</Type>
+					<CommandName>Form.Command.ВключитьСервисСейчас</CommandName>
+					<ExtendedTooltip name="ВключитьСервисСейчасРасширеннаяПодсказка" id="50"/>
+				</Button>
+				<Button name="НапомнитьПозже" id="53">
+					<Type>CommandBarButton</Type>
+					<Representation>Text</Representation>
+					<CommandName>Form.Command.НапомнитьПозже</CommandName>
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Напомнить позже</v8:content>
+						</v8:item>
+					</Title>
+					<ExtendedTooltip name="НапомнитьПозжеРасширеннаяПодсказка" id="54"/>
+				</Button>
+				<Button name="БольшеНеПоказывать" id="67">
+					<Type>CommandBarButton</Type>
+					<CommandName>Form.Command.БольшеНеПоказывать</CommandName>
+					<ExtendedTooltip name="БольшеНеПоказыватьРасширеннаяПодсказка" id="68"/>
+				</Button>
+			</ChildItems>
+		</CommandBar>
+	</ChildItems>
+	<Attributes>
+		<Attribute name="ЕстьПравоНаРедактированиеНастроекСервиса" id="3">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Есть право на редактирование настроек сервиса</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>xs:boolean</v8:Type>
+			</Type>
+		</Attribute>
+	</Attributes>
+	<Commands>
+		<Command name="ВключитьСервисСейчас" id="1">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Включить проверку</v8:content>
+				</v8:item>
+			</Title>
+			<ToolTip>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Включить проверку</v8:content>
+				</v8:item>
+			</ToolTip>
+			<Action>ВключитьСервисСейчас</Action>
+		</Command>
+		<Command name="БольшеНеПоказывать" id="3">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Больше не показывать</v8:content>
+				</v8:item>
+			</Title>
+			<ToolTip>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Больше не показывать</v8:content>
+				</v8:item>
+			</ToolTip>
+			<Action>БольшеНеПоказывать</Action>
+		</Command>
+		<Command name="НапомнитьПозже" id="2">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Напомнить позже</v8:content>
+				</v8:item>
+			</Title>
+			<ToolTip>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Напомнить позже</v8:content>
+				</v8:item>
+			</ToolTip>
+			<Action>НапомнитьПозже</Action>
+		</Command>
+	</Commands>
+</Form>
